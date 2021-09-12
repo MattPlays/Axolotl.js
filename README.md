@@ -12,11 +12,6 @@ const Axolotlt = require("axolotl.js")
 Axolotl().then(({url, facts}) => {
     console.log(url, facts)
 });
-// Or
-(async () => {
-    let {url, facts} = await Axolotl();
-    console.log(url, facts)
-})();
 ```
 
 # License

@@ -1,14 +1,15 @@
-const fetch = require("node-fetch");
+const axios = require("axios").default;
 /**
  * @returns {Promise<{url: string, facts: string, pics_repo: string, api_repo: string}>}
  */
 module.exports = async() => {
-    return fetch("https://axoltlapi.herokuapp.com/", {
-        "method": "GET",
-        "headers": {
-            "Accept": "application/json"
+    return axios({
+        method: "GET",
+        url: "https://axoltlapi.herokuapp.com/",
+        headers: {
+            "Accept":"application/json"
         }
-    }).then((data) => data.json()).then((data) => {
+    }).then(({data}) => {
         return data;
-    })
+    }).catch((err) => {throw new Error(err)});
 }
