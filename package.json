@@ -1,6 +1,6 @@
 {
   "name": "axolotl.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Axolotl.js utilizes the AxolotlAPI to return pictures and facts about Axolotls",
   "main": "index.js",
   "types": "index.d.ts",
